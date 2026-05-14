@@ -1,16 +1,113 @@
-# React + Vite
+# 🛡️ Plataforma de Gestión de Servicios de Seguridad Privada
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web para la administración integral de una agencia de seguridad privada. Permite gestionar clientes, servicios, personal, turnos e incidentes con control de acceso basado en roles.
 
-Currently, two official plugins are available:
+🌐 **Demo en vivo:** [privatedsecurity.vercel.app](https://privatedsecurity.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📋 Descripción
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Prototipo funcional desarrollado como proyecto académico para el curso de **Administración de Proyectos 2026**. La plataforma centraliza la operación de una agencia de seguridad privada en un solo sistema web accesible desde cualquier dispositivo con internet, sin necesidad de instalación.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Módulos del sistema
+
+| Módulo | Descripción |
+|---|---|
+| 🔐 **Login** | Autenticación con tres tipos de usuario |
+| 📊 **Dashboard** | Estadísticas generales e indicadores clave |
+| 🏢 **Clientes** | Gestión de empresas contratantes |
+| 💼 **Servicios** | Catálogo de servicios activos por cliente |
+| 👥 **Personal** | Equipo operativo, disponibilidad y zonas |
+| 📅 **Turnos** | Calendario y asignación de turnos |
+| ⚠️ **Incidentes** | Registro y seguimiento de incidentes |
+| 📈 **Reportes** | Gráficas y estadísticas filtradas por rol |
+
+---
+
+## 👤 Roles y permisos
+
+| Rol | Acceso |
+|---|---|
+| **Administrador** | Acceso completo a todos los módulos |
+| **Supervisor** | Dashboard, turnos, registro y gestión de incidentes |
+| **Cliente** | Vista de su propia empresa: servicios, turnos, incidentes y reportes |
+
+---
+
+## 🔑 Usuarios de prueba
+
+| Correo | Contraseña | Rol | Empresa |
+|---|---|---|---|
+| admin@seguridad.com | 1234 | Administrador | — |
+| supervisor@seguridad.com | 1234 | Supervisor | — |
+| norte@seguridad.com | 1234 | Cliente | Corporación Norte S.A. |
+| fortuna@seguridad.com | 1234 | Cliente | Centro Comercial La Fortuna |
+| bodega@seguridad.com | 1234 | Cliente | Bodega Industrial San Carlos |
+| clinica@seguridad.com | 1234 | Cliente | Clínica Santa Elena |
+
+---
+
+## 🛠️ Stack tecnológico
+
+- **React** — Biblioteca UI con hooks y estado local
+- **Tailwind CSS** — Utilidades CSS para diseño responsivo
+- **Vite** — Bundler ultrarrápido para desarrollo
+- **Recharts** — Gráficas de barras y pastel para reportes
+- **Lucide React** — Íconos SVG consistentes
+- **Vercel** — Despliegue continuo automático desde GitHub
+
+---
+
+## 🚀 Instalación local
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/chelmonque/privatedsecurity.git
+cd privatedsecurity
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Correr en desarrollo
+npm run dev
+```
+
+Abrí [http://localhost:5173](http://localhost:5173) en tu navegador.
+
+---
+
+## 📦 Build para producción
+
+```bash
+npm run build
+```
+
+Genera la carpeta `dist/` lista para despliegue estático.
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── App.jsx                  # Punto de entrada, importa SecurityPlatform
+├── SecurityPlatform.jsx     # Componente raíz con toda la lógica y módulos
+└── index.css                # Estilos globales con Tailwind
+```
+
+---
+
+## 📌 Notas del proyecto
+
+- No requiere backend ni base de datos — todos los datos son locales al frontend
+- El control de acceso por roles está implementado con guards de renderizado condicional
+- El despliegue en Vercel es automático con cada `git push` a la rama `main`
+
+---
+
+## 📚 Curso
+
+Administración de Proyectos · Ingeniería en Sistemas · 2026
