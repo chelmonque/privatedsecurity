@@ -423,7 +423,7 @@ const Clientes = ({ clientes, setClientes, readOnly = false }) => {
   const [modal,   setModal]   = useState(null); // null | "nuevo" | cliente obj
 
   const filtered = clientes.filter((c) =>
-    [c.empresa, c.ubicacion, c.contacto].some((f) =>
+    [c.empresa, c.ubicacion, c.nombre, c.apellido].filter(Boolean).some((f) =>
       f.toLowerCase().includes(search.toLowerCase())
     )
   );
